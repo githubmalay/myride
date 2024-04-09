@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRide Admin Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="driver_styles.css">
+  <style>
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .payment-details {
+      margin-bottom: 2rem;
+    }
+
+    .payment-details h3 {
+      margin-top: 0;
+    }
+
+    .earnings {
+      margin-bottom: 1rem;
+    }
+
+    .withdrawal {
+      margin-bottom: 2rem;
+    }
+
+    .withdrawal label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .withdrawal select,
+    .withdrawal button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .withdrawal select {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .withdrawal button {
+      background-color: #2a725c; /* Dark blue background */
+      color: #fff;
+    }
+
+    .withdrawal button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>MyRide Drivers Dashboard</h1>
+  </header>
+  <div class="sidebar">
+    <ul>
+      <li><a href="driver_dashboard.html">Dashboard</a></li>
+      <li><a href="driver_navigation.html">Navigation</a></li>
+      <li><a href="drivers_payment.html">Payment</a></li>
+      <li><a href="driver_request.html">Trip Request</a></li>
+      <li><a href="driver_earning.html">Earnings and Payouts</a></li>
+      <li><a href="driver_profile.html">your Profile</a></li>
+      <!-- <li><a href="admin_feedback.html">Feedback</a></li> -->
+      <!-- <li><a href="#">Settings</a></li> -->
+      <li><a href="driver_login.html">Logout</a></li>
+
+    </ul>
+</div>
+  <main role="main" class="col-lg-9 ml-sm-auto col-md-12 px-4">
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <div class="container-with-shadow">
+        <div class="container">
+            <h2>Payment Processing</h2>
+      
+            <div class="payment-details">
+              <h3>Payment Details</h3>
+              <div class="earnings">
+                <p>Total Earnings: $1000</p>
+                <p>Weekly Earnings: $300</p>
+              </div>
+            </div>
+      
+            <div class="withdrawal">
+              <h3>Withdrawal</h3>
+              <form>
+                <label for="paymentMethod">Select Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod">
+                  <option value="paypal">PayPal</option>
+                  <option value="bank">Bank Transfer</option>
+                </select>
+                <button type="submit">Withdraw</button>
+              </form>
+            </div>
+          </div>
+        </main>
+      </body>
+      </html>
+      

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRide Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    
+    .containerss {
+        max-width: 500px;
+      max-height: 3000px;
+      margin-top: 50px;
+      /* margin-right: 50px; */
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      /* align-items: center; */
+      /* right: inherit; */
+    }
+    .payment-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .payment-option label {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+    .payment-option label img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    .submit-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Ride</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="containerss">
+  <form id="payment-form">
+    <h3>Payment Method</h3><br>
+    <div class="payment-option">
+      <input type="radio" id="gpay" name="payment-method" value="gpay">
+      <label for="gpay">
+        <img src="gpay.jpeg" alt="Google Pay">
+        Google Pay
+      </label>
+    </div>
+    <div class="payment-option">
+      <input type="radio" id="cash" name="payment-method" value="cash">
+      <label for="cash">
+        <img src="cash.jpg" alt="Cash">
+        Cash
+      </label>
+    </div>
+    <div class="payment-option">
+      <input type="radio" id="wallet" name="payment-method" value="wallet">
+      <label for="wallet">
+        <img src="wallet.jpg" alt="Wallet">
+        Wallet
+      </label>
+    </div>
+  </form>
+  <a href="review.html">
+    <button type="submit" class="submit-btn">Give Your Feedback</button></a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

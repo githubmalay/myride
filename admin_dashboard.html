@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRide Admin Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="admin_styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>MyRide Admin Dashboard</h1>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="admin_dashboard.html">Dashboard</a></li>
+      <li><a href="admin_drivers.html">Drivers</a></li>
+      <li><a href="admin_trip.html">Trips</a></li>
+      <li><a href="admin_finance.html">Finance</a></li>
+      <li><a href="admin_feedback.html">Feedback</a></li>
+      <!-- <li><a href="#">Settings</a></li> -->
+      <li><a href="admin_login.html">Logout</a></li>
+
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main role="main" class="col-lg-9 ml-sm-auto col-md-12 px-4">
+    <div class="row">
+      <!-- Users Card -->
+      <div class="col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Users</h5>
+            <h2 class="card-text">10,000</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Drivers Card -->
+      <div class="col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Drivers</h5>
+            <h2 class="card-text">5,000</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Trips Card -->
+      <div class="col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Trips</h5>
+            <h2 class="card-text">100,000</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Revenue Card -->
+      <div class="col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Revenue</h5>
+            <h2 class="card-text">₹10,00,000</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">User Registration Trend</h5>
+            <div class="chart-container">
+              <!-- Add user registration trend chart here (e.g., using Chart.js) -->
+              <canvas id="userRegistrationChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Trips Analysis</h5>
+            <div class="chart-container">
+              <!-- Add trips analysis chart here (e.g., using Chart.js) -->
+              <canvas id="tripsAnalysisChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-white">
+        <div class="card-body">
+          <h5 class="card-title">Driver Performance</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+      <thead style="background-color: #2a2a72; color: #b4c9e6;">
+              <tr>
+                <th>Booking ID</th>
+                <th>Date</th>
+                <th>Pickup Location</th>
+                <th>Drop Location</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="bookingList"></tbody>
+          </table>
+        </div>
+    
+  </main>
+
+  <!-- Bootstrap and Chart.js Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Add Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Example Chart.js code for user registration trend chart
+    var ctx1 = document.getElementById('userRegistrationChart').getContext('2d');
+    var userRegistrationChart = new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'User Registrations',
+          data: [100, 150, 200, 180, 220, 250],
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Example Chart.js code for trips analysis chart
+    var ctx2 = document.getElementById('tripsAnalysisChart').getContext('2d');
+    var tripsAnalysisChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Trips per Day',
+          data: [200, 220, 250, 230, 240, 270, 260],
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+       // Dummy booking data (replace with actual data from backend)
+const bookings = [
+  { id: 1, date: '2024-04-10', pickup: 'Location A', drop: 'Location B', status: 'Completed' },
+  { id: 2, date: '2024-04-12', pickup: 'Location C', drop: 'Location D', status: 'Pending' },
+  { id: 3, date: '2024-04-15', pickup: 'Location E', drop: 'Location F', status: 'Cancelled' }
+];
+
+// Function to display bookings in table format
+function displayBookingsTable(bookingData) {
+  const bookingList = document.getElementById('bookingList');
+  bookingList.innerHTML = ''; // Clear previous data
+
+  bookingData.forEach(booking => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${booking.id}</td>
+      <td>${booking.date}</td>
+      <td>${booking.pickup}</td>
+      <td>${booking.drop}</td>
+      <td>${booking.status}</td>
+    `;
+    bookingList.appendChild(row);
+  });
+}
+
+// Display bookings in table format when the page loads
+window.onload = function() {
+  displayBookingsTable(bookings); // Display dummy bookings, replace with actual data fetch
+};
+  </script>
+</body>
+</html>

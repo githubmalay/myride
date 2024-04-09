@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EYEWEAR Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Ride</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin_login.html">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="driver_login.html">Driver</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container container-with-shadow">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="map-container">
+            <img src="map1.png" alt="Map Image" class="map-img">
+        </div>
+    </div>
+        <div class="col-md-6">
+            <form id="rideBookingForm" class="location-form">
+              <h3 class="mb-4">Select Location & Ride Type</h3>
+              <div class="form-group">
+                <label for="pickupLocation">Pickup Location:</label>
+                <input type="text" class="form-control" id="pickupLocation">
+              </div>
+              <div class="form-group">
+                <label for="dropoffLocation">Drop-off Location:</label>
+                <input type="text" class="form-control" id="dropoffLocation">
+              </div>
+              <div class="form-group">
+                <label for="pickupTime">Pickup Time:</label>
+                <input type="time" class="form-control" id="pickupTime">
+              </div>
+              <div class="form-group">
+                <select class="form-control" id="rideType" required>
+                  <option value="micro">For me</option>
+                  <option value="mini">For someone else</option>
+                </select>
+              </div>
+            </form>
+            <a href="avaliable.html">
+              <button type="submit" class="btn btn-primary btn-block">Book Now</button></a>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

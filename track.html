@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRide Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .tracking-details {
+     /* margin: 50px auto;  */
+      flex: 1;
+      /* background-color: #fff; */
+      border-radius: 10px;
+      padding: 20px;
+      /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); */
+    }
+    .tracking-item {
+      margin-bottom: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Ride</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container container-with-shadow">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="map-container">
+            <img src="map.png" alt="Map Image" class="map-img">
+        </div>
+    </div>
+    <div class="col-md-6 tracking-details">
+        <h3>Tracking Details</h3>
+        <div class="tracking-item">
+          <strong>Status:</strong> On the Way
+        </div>
+        <div class="tracking-item">
+          <strong>Driver Name:</strong> John Doe
+        </div>
+        <div class="tracking-item">
+          <strong>Driver Contact:</strong> +1234567890
+        </div>
+        <div class="tracking-item">
+          <strong>Estimated Time of Arrival:</strong> 1:30 PM
+        </div>
+        <div class="tracking-item">
+          <strong>Current Location:</strong> 123 Main Street, City, Country
+        </div>
+        <div class="tracking-item">
+          <strong>Distance Covered:</strong> 5.3 km
+        </div>
+        <a href="payment.html">
+          <button class="btn btn-primary">Process to Payment</button></a>    
+      </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

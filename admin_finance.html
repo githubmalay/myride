@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRide Admin Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="admin_styles.css">
+  <style>
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Adjusted grid layout for responsiveness */
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+    .card p {
+      margin-bottom: 0;
+      color: #666;
+    }
+    .chart-container {
+      width: 100%; /* Set chart container width to 100% */
+      height: auto;
+      margin-top: 20px;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) { /* Adjust styles for smaller screens */
+      .dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+  </style>
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>MyRide Admin Dashboard</h1>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="admin_dashboard.html">Dashboard</a></li>
+      <li><a href="admin_drivers.html">Drivers</a></li>
+      <li><a href="admin_trip.html">Trips</a></li>
+      <li><a href="admin_finance.html">Finance</a></li>
+      <li><a href="admin_feedback.html">Feedback</a></li>
+      <!-- <li><a href="#">Settings</a></li> -->
+      <li><a href="admin_login.html">Logout</a></li>
+
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main role="main" class="col-lg-9 ml-sm-auto col-md-12 px-4">
+      <div class="dashboard">
+        <!-- Pie chart cards -->
+        <div class="card">
+          <h3>Total Revenue</h3>
+          <div class="chart-container">
+            <canvas id="revenueChart"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Total Expenses</h3>
+          <div class="chart-container">
+            <canvas id="expensesChart"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Net Income</h3>
+          <div class="chart-container">
+            <canvas id="netIncomeChart"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Profit Margin</h3>
+          <div class="chart-container">
+            <canvas id="profitMarginChart"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Customer Spendings</h3>
+          <div class="chart-container">
+            <canvas id="customerSpendingsChart"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Operational Costs</h3>
+          <div class="chart-container">
+            <canvas id="operationalCostsChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Script for Chart.js and chart initialization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Sample data for total revenue pie chart
+    const revenueData = {
+      labels: ['Rides', 'Other Income'],
+      datasets: [{
+        label: 'Total Revenue',
+        data: [8000, 2000],
+        backgroundColor: [
+          'rgba(54, 162, 235, 0.8)', // Rides color
+          'rgba(255, 205, 86, 0.8)'   // Other Income color
+        ],
+        hoverOffset: 4
+      }]
+    };
+
+    // Chart configuration for total revenue pie chart
+    const revenueConfig = {
+      type: 'pie',
+      data: revenueData,
+    };
+
+    // Initialize the total revenue pie chart
+    var revenueChart = new Chart(
+      document.getElementById('revenueChart'),
+      revenueConfig
+    );
+
+    // Sample data for total expenses pie chart
+    const expensesData = {
+      labels: ['Fuel', 'Maintenance', 'Insurance', 'Other'],
+      datasets: [{
+        label: 'Total Expenses',
+        data: [1500, 1000, 1200, 300],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.8)',
+          'rgba(54, 162, 235, 0.8)',
+          'rgba(255, 205, 86, 0.8)',
+          'rgba(75, 192, 192, 0.8)'
+        ],
+        hoverOffset: 4
+      }]
+    };
+
+    // Chart configuration for total expenses pie chart
+    const expensesConfig = {
+      type: 'pie',
+      data: expensesData,
+    };
+
+    // Initialize the total expenses pie chart
+    var expensesChart = new Chart(
+      document.getElementById('expensesChart'),
+      expensesConfig
+    );
+
+    // Sample data for net income pie chart
+    const netIncomeData = {
+      labels: ['Net Income'],
+      datasets: [{
+        label: 'Net Income',
+        data: [5000],
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.8)'
+        ],
+        hoverOffset: 4
+      }]
+    };
+
+    // Chart configuration for net income pie chart
+    const netIncomeConfig = {
+      type: 'pie',
+      data: netIncomeData,
+    };
+
+    // Initialize the net income pie chart
+    var netIncomeChart = new Chart(
+      document.getElementById('netIncomeChart'),
+      netIncomeConfig
+    );
+
+    // Sample data for profit margin pie chart
+    const profitMarginData = {
+      labels: ['Profit', 'Loss'],
+      datasets: [{
+        label: 'Profit Margin',
+        data: [6000, 1000],
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.8)',
+          'rgba(255, 99, 132, 0.8)'
+        ],
+        hoverOffset: 4
+      }]
+    };
+
+    // Chart configuration for profit margin pie chart
+    const profitMarginConfig = {
+      type: 'pie',
+      data: profitMarginData,
+    };
+
+    // Initialize the profit margin pie chart
+    var profitMarginChart = new Chart(
+      document.getElementById('profitMarginChart'),
+      profitMarginConfig
+    );
+
+    // Sample data for customer spendings pie chart
+    const customerSpendingsData = {
+      labels: ['Rides', 'Other Spendings'],
+      datasets: [{
+        label: 'Customer Spendings',
+        data: [7000, 3000],
+        backgroundColor: [
+          'rgba(54, 162, 235, 0.8)', // Rides color
+          'rgba(255, 205, 86, 0.8)'   // Other Spendings color
+        ],
+        hoverOffset: 4
+      }]
+    };
+
+    // Chart configuration for customer spendings pie chart
+    const customerSpendingsConfig = {
+      type: 'pie',
+      data: customerSpendingsData,
+    };
+
+    // Initialize the customer spendings pie chart
+    var customerSpendingsChart = new Chart(
+      document.getElementById('customerSpendingsChart'),
+      customerSpendingsConfig
+    );
+
+    // Sample data for operational costs pie chart
+    const operationalCostsData = {
+      labels: ['Fuel', 'Maintenance', 'Insurance', 'Other Costs'],
+      datasets: [{
+        label: 'Operational Costs',
+        data: [1000, 800, 1200, 500],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.8)',
+          'rgba(54, 162, 235, 0.8)',
+          'rgba(255, 205, 86, 0.8)',
+          'rgba(75, 192, 192, 0.8)'
+        ],
+        hoverOffset: 4
+      }]
+    };
+
+    // Chart configuration for operational costs pie chart
+    const operationalCostsConfig = {
+      type: 'pie',
+      data: operationalCostsData,
+    };
+
+    // Initialize the operational costs pie chart
+    var operationalCostsChart = new Chart(
+      document.getElementById('operationalCostsChart'),
+      operationalCostsConfig
+    );
+  </script>
+</body>
+</html>

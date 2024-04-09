@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRide Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    
+    main {
+      padding: 2rem;
+    }
+
+    .containerss {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .feedback-form {
+      margin-bottom: 2rem;
+    }
+
+    .rating-stars {
+      margin-bottom: 1rem;
+    }
+
+    .rating-stars input[type="radio"] {
+      display: none;
+    }
+
+    .rating-stars label {
+      font-size: 30px;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .rating-stars label:hover,
+    .rating-stars label:hover ~ label,
+    .rating-stars input[type="radio"]:checked ~ label {
+      color: #f8c822; /* Uber yellow */
+    }
+
+    .rating-stars label:before {
+      content: "\2605";
+    }
+
+    .comment textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    .comment textarea:focus {
+      border-color: #f8c822; /* Uber yellow */
+    }
+
+    button[type="submit"] {
+      background-color: #0056b3;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+        <div class="container">
+          <a class="navbar-brand" href="#">My Ride</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<main>
+    <div class="containerss">
+      <h2>Feedback and Ratings</h2>
+
+      <div class="feedback-form">
+        <form>
+          <div class="rating-stars">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1"></label>
+          </div>
+          <div class="comment">
+            <label for="comment">Leave a comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Write your feedback here..."></textarea>
+          </div>
+        </form>
+        <a href="index.html">
+        <button type="submit">Submit</button></a>  
+      </div>
+    </div>
+  </main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

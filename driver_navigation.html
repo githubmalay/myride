@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRide Admin Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="driver_styles.css">
+  <style>
+    .container {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: auto; /* Increased width for both image and details */
+      margin: 20px auto; /* Center the container */
+      display: flex; /* Use flexbox for layout */
+      align-items: center; /* Center items vertically */
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .trip-details {
+      margin-left: 20px; /* Add space between image and details */
+    }
+
+    .trip-details h3 {
+      margin-top: 0;
+    }
+
+    .map-image {
+      width: 60%;
+      border-radius: 8px;
+    }
+
+    /* Media query for smaller screens (e.g., mobile devices) */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+      }
+
+      .map-image {
+        width: 100%; /* Full width for image on smaller screens */
+        margin-bottom: 20px; /* Add space below image */
+      }
+
+      .trip-details {
+        margin-left: 0; /* Remove left margin for details */
+      }
+    }
+    .btn-primary{
+      background-color: #157857;
+      border-color:  #157857;
+    color: #fff;
+    /* background-color: #007bff; */
+    /* border-color: #007bff; */
+}
+.btn-primary :hover{
+  background-color: #157857;
+}
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>MyRide Drivers Dashboard</h1>
+  </header>
+  <div class="sidebar">
+    <ul>
+      <li><a href="driver_dashboard.html">Dashboard</a></li>
+      <li><a href="driver_navigation.html">Navigation</a></li>
+      <li><a href="drivers_payment.html">Payment</a></li>
+      <li><a href="driver_request.html">Trip Request</a></li>
+      <li><a href="driver_earning.html">Earnings and Payouts</a></li>
+      <li><a href="driver_profile.html">your Profile</a></li>
+      <!-- <li><a href="admin_feedback.html">Feedback</a></li> -->
+      <!-- <li><a href="#">Settings</a></li> -->
+      <li><a href="driver_login.html">Logout</a></li>
+
+    </ul>
+</div>
+  <main role="main" class="col-lg-9 ml-sm-auto col-md-12 px-4">
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <div class="container">
+        <img src="map.png" alt="Map Image" class="map-image">
+        <div class="trip-details">
+          <div class="trip-details">
+            <h3>Trip Details</h3>
+            <p><strong>Customer Name:</strong> John Doe</p>
+            <p><strong>Pickup Location:</strong> New York</p>
+            <p><strong>Destination:</strong> Los Angeles</p>
+            <p><strong>Distance:</strong> 2800 miles</p>
+            <p><strong>Estimated Time:</strong> 2 days</p>
+            <p><strong>Special Instructions:</strong> None</p>
+            <button class="btn btn-primary">Start Navigation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

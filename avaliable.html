@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRide Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Ride</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-with-shadow">
+    <div class="row">
+      <div class="col-md-6 map-container">
+        <img src="map1.png" alt="Map Image" class="map-img">
+      </div>
+      <div class="col-md-6 ride-options">
+        <div class="ride-option">
+          <img src="auto.jpg" alt="Ride Image" class="ride-img">
+          <div class="ride-details">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="olaMicro" name="ride" class="custom-control-input">
+              <label class="custom-control-label ride-title" for="olaMicro">Auto</label>
+            </div>
+            <p class="ride-price">₹40</p>
+            <p class="ride-description">Fastest ride with maximum 3 laggage.</p>
+            <!-- <button class="btn btn-book">Book Now</button> -->
+          </div>
+        </div>
+        <div class="ride-option">
+          <img src="bike.png" alt="Ride Image" class="ride-img">
+          <div class="ride-details">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="olaMini" name="ride" class="custom-control-input">
+              <label class="custom-control-label ride-title" for="olaMini">Bike</label>
+            </div>
+            <p class="ride-price">₹20</p>
+            <p class="ride-description">Affordable price with maximum  2 luggages.</p>
+            <!-- <button class="btn btn-book">Book Now</button> -->
+          </div>
+        </div>
+        <div class="ride-option">
+          <img src="car.png" alt="Ride Image" class="ride-img">
+          <div class="ride-details">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="olaPrime" name="ride" class="custom-control-input">
+              <label class="custom-control-label ride-title" for="olaPrime">Car</label>
+            </div>
+            <p class="ride-price">₹80</p>
+            <p class="ride-description">Comfortable top Quality ride</p>
+            <!-- <button class="btn btn-book">Book Now</button> -->
+          </div>
+          
+        </div>
+        <div class="form-group">
+          <!-- <label for="rideType">Ride Type:</label> -->
+          <select class="form-control" id="rideType" required>
+            <option value="micro">Gpay</option>
+            <option value="mini">Cash</option>
+          </select>
+        </div>
+      </form>
+      <a href="confirm.html">
+        <button type="submit" class="btn btn-primary btn-block">Book Now</button></a>
+    </div>
+        </div>
+  
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

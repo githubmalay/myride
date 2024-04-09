@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyRide Admin Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="driver_styles.css">
+  <style>
+    /* Additional styles specific to this page */
+    .earnings-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .earning-details {
+      margin-bottom: 20px;
+    }
+
+    .earning-details p {
+      margin-bottom: 10px;
+    }
+
+    .payout-methods {
+      margin-top: 20px;
+    }
+
+    .payout-methods ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .payout-methods li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>MyRide Drivers Dashboard</h1>
+  </header>
+  <div class="sidebar">
+    <ul>
+      <li><a href="driver_dashboard.html">Dashboard</a></li>
+            <li><a href="driver_navigation.html">Navigation</a></li>
+            <li><a href="drivers_payment.html">Payment</a></li>
+            <li><a href="driver_request.html">Trip Request</a></li>
+            <li><a href="driver_earning.html">Earnings and Payouts</a></li>
+            <li><a href="driver_profile.html">your Profile</a></li>
+            <!-- <li><a href="admin_feedback.html">Feedback</a></li> -->
+            <!-- <li><a href="#">Settings</a></li> -->
+            <li><a href="driver_login.html">Logout</a></li>
+    
+    </ul>
+</div>
+  <main role="main" class="col-lg-9 ml-sm-auto col-md-12 px-4">
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <div class="container-with-shadow">
+                <h2>Earnings Overview</h2>
+                <div class="earning-details">
+                  <p><strong>Total Trips Completed:</strong> 150</p>
+                  <p><strong>Total Earnings:</strong> $3000</p>
+                  <p><strong>Average Earnings per Trip:</strong> $20</p>
+                  <p><strong>Current Week's Earnings:</strong> $500</p>
+                </div>
+          
+                <h2>Payout Information</h2>
+                <div class="earning-details">
+                  <p><strong>Payment Cycle:</strong> Weekly</p>
+                  <p><strong>Next Payout Date:</strong> April 15, 2024</p>
+                  <p><strong>Minimum Payout Threshold:</strong> $100</p>
+                </div>
+          
+                <div class="payout-methods">
+                  <h3>Payout Methods</h3>
+                  <ul>
+                    <li><strong>Direct Deposit:</strong> Payments deposited directly into your bank account.</li>
+                    <li><strong>PayPal:</strong> Receive payments through your PayPal account.</li>
+                    <li><strong>Check:</strong> Receive payments by physical check mailed to your address.</li>
+                  </ul>
+                </div>
+              </div>
+            </main>
+          </body>
+          
+          </html>
+          

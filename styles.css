@@ -1,0 +1,107 @@
+/* Add any custom styles for your page here */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dfe8e8;
+  }
+  #message {
+    /* font-weight: bold; */
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .bg-custom {
+    background-color: #0b5f71cc !important; /* Custom color combination */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem; /* Larger font size for the brand */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff !important; /* White text color for nav links */
+    /* font-weight: bold; */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #279e8e !important; /* Yellow color on hover */
+  }
+  
+  .navbar-toggler-icon {
+    color: #fff; /* White color for the toggle icon */
+  }
+  
+  .navbar-collapse {
+    justify-content: flex-end; /* Align nav links to the right */
+  }
+
+  /* Container with shadow */
+  .container-with-shadow {
+    margin-top: 30px;
+        background-color: #fff; /* White background */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        padding: 20px; /* Padding inside the container */
+        margin-bottom: 20px; /* Margin to separate from other elements */
+    }
+
+    /* Custom CSS for form */
+    .location-form {
+      margin-top: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .map-img {
+      margin-bottom: 20px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px; /* Rounded corners */
+    }
+  
+        .ride-options {
+        margin: 20px;
+        flex: 1;
+        padding-left: 20px;
+      }
+      .ride-option {
+        display: flex;
+        margin-bottom: 20px;
+        border: 1px solid #9c9292;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #e4eaee;
+      }
+      .ride-img {
+        width: 100px;
+        margin-right: 20px;
+        border-radius: 10px;
+      }
+      .ride-details {
+        flex: 1;
+      }
+      .ride-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .ride-price {
+        font-size: 1rem;
+        color: #007bff;
+        margin-bottom: 10px;
+      }
+      .ride-description {
+        margin-bottom: 20px;
+      }
+      .btn-book {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 15px;
+        cursor: pointer;
+      }
+      .btn-book:hover {
+        background-color: #0056b3;
+      }

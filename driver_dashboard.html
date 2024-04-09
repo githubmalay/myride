@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyRide Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="driver_styles.css">
+    <style>
+        /* .main-content {
+            flex: 1;
+        } */
+
+        .container-with-shadow {
+            margin-top: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                max-width:  100%;
+                width:      100% !important
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .chart-container {
+            width: 300px;
+            height: 200px;
+            margin-right: 20px;
+            border: 1px solid #ccc;
+            /* Add a border for visualization */
+            border-radius: 8px;
+            /* Optional: Rounded corners */
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>MyRide Drivers Dashboard</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="driver_dashboard.html">Dashboard</a></li>
+            <li><a href="driver_navigation.html">Navigation</a></li>
+            <li><a href="drivers_payment.html">Payment</a></li>
+            <li><a href="driver_request.html">Trip Request</a></li>
+            <li><a href="driver_earning.html">Earnings and Payouts</a></li>
+            <li><a href="driver_profile.html">your Profile</a></li>
+            <!-- <li><a href="admin_feedback.html">Feedback</a></li> -->
+            <!-- <li><a href="#">Settings</a></li> -->
+            <li><a href="driver_login.html">Logout</a></li>
+    
+        </ul>
+    </div>
+    <main role="main" class="col-lg-9 ml-sm-auto col-md-12 px-4">
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="container-with-shadow">
+                <h1>Welcome, John Doe!</h1>
+
+                <!-- Earnings Section -->
+                <section id="earnings">
+                    <h2>Earnings</h2>
+                    <div class="earnings-item">
+                        <span>Today's Earnings:</span>
+                        <span>₹100</span>
+                    </div>
+                    <div class="earnings-item">
+                        <span>Weekly Earnings:</span>
+                        <span>₹700</span>
+                    </div>
+                    <!-- Add more earnings details as needed -->
+                </section>
+
+                <!-- Trip History Section -->
+                <section id="trip-history">
+                    <h2>Trip History</h2>
+                    <div class="trip-history-item">
+                        <p>Date: 2024-04-09 | Fare: ₹25 | Distance: 10 miles</p>
+                    </div>
+                    <div class="trip-history-item">
+                        <p>Date: 2024-04-08 | Fare: ₹30 | Distance: 12 miles</p>
+                    </div>
+                    <!-- Add more trip history items as needed -->
+                </section>
+
+                <!-- Ratings Section -->
+                <section id="ratings">
+                    <h2>Ratings</h2>
+                    <div class="ratings-item">
+                        <p>Date: 2024-04-09 | Rating: 4.5</p>
+                    </div>
+                    <div class="ratings-item">
+                        <p>Date: 2024-04-08 | Rating: 4.2</p>
+                    </div>
+                    <!-- Add more ratings items as needed -->
+                </section>
+
+                <!-- Recent Rides Section -->
+                <section id="recent-rides">
+                    <h2>Recent Rides</h2>
+                    <div class="recent-rides-item">
+                        <p>Ride ID: 1234 | Date: 2024-04-09 | Fare: ₹25 | Distance: 10 miles</p>
+                    </div>
+                    <div class="recent-rides-item">
+                        <p>Ride ID: 5678 | Date: 2024-04-08 | Fare: ₹30 | Distance: 12 miles</p>
+                    </div>
+                    <!-- Add more recent rides items as needed -->
+                </section>
+
+                <!-- Notifications Section -->
+                <section id="notifications">
+                    <h2>Notifications</h2>
+                    <div class="notification-item">
+                        <p>Date: 2024-04-09 | Message: New ride request</p>
+                    </div>
+                    <div class="notification-item">
+                        <p>Date: 2024-04-08 | Message: Weekly summary available</p>
+                    </div>
+                    <!-- Flex container for charts -->
+                    <div class="chart-container">
+                        <canvas id="earningsChart" width="300" height="200"></canvas>                    </div>
+
+                    <!-- Include Chart.js library and script for chart creation -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+                    <script>
+                        // Sample data (replace with actual data)
+                        const earningsData = {
+                            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                            datasets: [{
+                                label: 'Earnings',
+                                data: [100, 150, 120, 180, 200],
+                                backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue color
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1
+                            }]
+                        };
+
+                        
+
+                        // Create earnings chart
+                        const earningsCtx = document.getElementById('earningsChart').getContext('2d');
+                        new Chart(earningsCtx, {
+                            type: 'line',
+                            data: earningsData,
+                            options: {
+                                responsive: false, // Prevent chart from resizing with the window
+                            }
+                        });
+
+                    </script>
+</body>
+
+</html>
